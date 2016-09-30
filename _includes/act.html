@@ -1,0 +1,12 @@
+
+
+
+<article class="o wow roll{% cycle ' p-b', ' p-b p-t', ' p-b p-t' %}" id="{{ post.title | downcase | replace:' ','-' | replace:',','' | strip_html }}" {% cycle 'data-wow-delay="1.5s"', 'data-wow-delay=".5s"', 'data-wow-delay=".5s"' %}>
+
+  {% include {{ post.image }} %}
+
+  <div class="m-0 o-c {{ post.item-class  }}">
+    {{ post.content }}
+  </div>
+
+</article>

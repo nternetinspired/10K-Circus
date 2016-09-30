@@ -1,0 +1,13 @@
+
+/* ==========================================================================
+    BODY
+   ========================================================================== */
+
+body {
+  @include font-smoothing();
+  font: $weight-root #{$root-size-em}/#{$root-lineheight} $font-root;
+  
+  @include mq($min, $xl) {
+    font-size: 1.5vw;
+  }
+}

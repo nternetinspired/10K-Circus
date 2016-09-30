@@ -1,0 +1,18 @@
+
+/* ==========================================================================
+    OVERLAYS
+   ========================================================================== */
+
+// Create a lovely color-wash overlay, images for example.
+
+.o {
+  position: relative;
+
+  &-c {
+    position: absolute;
+    width: 67%;
+    top: 50%;
+    left: 16.5%;
+    padding: 5%;
+  }
+}

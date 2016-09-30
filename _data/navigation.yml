@@ -1,0 +1,9 @@
+
+# Primary site nav
+primary:
+  - title: About
+    href: /
+  - title: Shows
+    href: /shows/
+  - title: Source
+    href: https://github.com/nternetinspired/10Kcircus

@@ -1,0 +1,34 @@
+
+<footer role="contentinfo">
+
+  <h2 class="h3 c--1 ff-mono p-t p-b ta-c tt-uc wow flipInX">
+    ·Created for you by·
+  </h2>
+
+  {% if page.description %}
+  <div class="wow zoomIn">
+    <p class="fw-500 lede italic">{{ page.description  }}</p>
+  </div>
+  {% endif %}
+
+  <p class="w-c">
+    <small>
+      <strong>Please note</strong>: this is <em>not</em> an advertisment, it is a marvelous
+      advertissément&reg; for a <em>completely</em> fictional circus, with tenuos links to all
+      things circussy.<br> Feel free, but not obliged, to peruse
+      <a href="https://github.com/nternetinspired/10K-Circus">the source of this
+      site on Github</a> or read more <a href="{{ "/about/" | prepend: site.baseurl }}">about the site</a>.
+      Can you feel the love? We can feel it.<br>One love, one web, one byte at a time.
+    </small>
+  </p>
+
+  <p class="wow jel">
+    <small>* Actually, it's just a paltry 9.8KB!</small>
+  </p>
+
+  <p>
+    <small>
+      &copy; {{ site.time | date: '%Y' }} {{ site.company }} &middot; {{ site.disclaimer }}
+    </small>
+  </p>
+</footer>

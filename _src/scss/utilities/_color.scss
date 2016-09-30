@@ -1,0 +1,19 @@
+
+/* ==========================================================================
+    TEXT COLOUR CONTROL STYLES
+    // scss-lint:disable ImportantRule
+   ========================================================================== */
+
+/* Project default colours */
+.c--b {
+ color: $color-body-background;
+}
+
+.c--c {
+  color: currentColor;
+}
+
+/* Our brand palette colours */
+.c--1 {
+  color: $color-primary;
+}

@@ -1,0 +1,18 @@
+---
+layout: page
+title: The<br> <span class="fs-10vw">Incredible</span><br> <span class="fs-10vw">10K<span class="animated jello infinite c--1">*</span> Circus</span>
+description: <a href="https://twitter.com/nternetinspired">@nternetinspired</a> &amp; <a href="https://twitter.com/JasonHorsefight">@JasonHorsefight</a><br>AKA Cowbell Fever Design, as an entry to the&nbsp;<a href="https://a-k-apart.com/">10K&nbsp;Apart</a>&nbsp;competition.
+subtitle: Proudly present
+permalink: /
+---
+
+<section itemprop="articleBody">
+  <h2 class="h3 c--1 ff-mono p-t p-b ta-c tt-uc wow flipInX" data-wow-delay="1s">
+    ·Featuring·
+  </h2>
+
+  {% for post in site.acts limit: 3 %}
+    {% include act.html %}
+  {% endfor %}
+
+</section>

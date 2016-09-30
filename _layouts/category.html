@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<section itemscope itemtype="http://schema.org/Blog">
+
+  <header class="box">
+    {% if page.subtitle %}
+    <p class="fw-7 h3 tt-uc">&middot;{{ page.subtitle  }}&middot;</p>
+    {% endif %}
+
+    {% if page.title %}
+    <h1 class="m--sm tt-uc">{{ page.title  }}</h1>
+    {% endif %}
+  </header>
+
+  {{ content }}
+
+</section>

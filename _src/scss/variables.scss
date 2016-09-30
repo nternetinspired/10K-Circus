@@ -1,0 +1,141 @@
+
+// Heads-up!
+//
+// Certain variables have a default value of 'null' so that there is no output
+// for any rule using that variable name. This is deliberate, because in many
+// cases the output would be identical to the browser calculated value, i.e.
+// unnecessary css, and what's the point in that!
+//
+// For example, if your headings are supposed to be the same colour as the body
+// text then you don't need to set the heading colour, it already is that colour.
+// If you want your heading to be a different colour, then go ahead and change
+// the $color-headings variable to whatever you want. If it isn't null then the
+// colour rule will be compiled to your css.
+//
+// Bottom line? Writing code you don't have to is a mug's game.
+
+// A modular typographic scale ensures harmonious font sizing, and saves us from
+// simply pulling magic numbers out of a hat! See modularscale.com/ for details.
+$minor-second                : 1.067;
+$major-second                : 1.125;
+$minor-third                 : 1.2;
+$major-third                 : 1.25;
+$perfect-fourth              : 1.333;
+$augmented-fourth            : 1.414;
+$perfect-fifth               : 1.5;
+$minor-sixth                 : 1.6;
+$golden-section              : 1.618;
+$major-sixth                 : 1.667;
+$minor-seventh               : 1.778;
+$major-seventh               : 1.875;
+$octave                      : 2;
+$major-tenth                 : 2.5;
+$major-eleventh              : 2.667;
+$major-twelfth               : 3;
+$double-octave               : 4;
+
+/* ROOT VARIABLES
+============================================================================= */
+
+// Default font-size. Set in px, it will be converted to em.
+$root-size                   : 16px !default;
+
+// Default lead. A unitless value, adjust to taste.
+$root-lineheight             : $minor-sixth !default;
+
+// A visual guide to help correct a wonky vertical rhythym.
+$show-baseline               : false !default;
+
+
+/* FONT STACK VARIABLES
+============================================================================= */
+
+// Our font stacks
+$font-sans                   : 'avenir next', sans-serif !default;
+$font-serif                  : Baskerville, serif !default;
+$font-code                   : monospace !default;
+
+// Project element stacks
+$font-root                   : $font-serif !default;
+$font-root-capheight         : .78;
+
+$font-button                 : $font-sans !default;
+$font-heading                : null !default;
+
+
+/* FONT WEIGHT VARIABLES
+============================================================================= */
+
+// Button weight
+$weight-button               : null !default;
+
+// Heading weight
+$weight-heading              : null !default;
+
+// Default font-weight.
+$weight-root                 : 400 !default;
+
+// The weight used for <b> and <strong> elements.
+$weight-strong               : null !default;
+
+
+/* TYPOGRAPHIC VARIABLES
+============================================================================= */
+
+// Our chosen scale factor for font sizing.
+$scale                       : $perfect-fourth  !default;
+
+// Enable OpenType font features (If supported by the font-family.)?
+// Inspired by github.com/kennethormandy/normalize-opentype.css
+$opentype                    : true !default;
+
+// Paragraph settings.
+$paragraph-indent            : false !default; // Get old-skool classy?
+$paragraph-justify           : false !default;
+
+// Default quote marks.
+$open-quote                  : \201C !default; // If you're French you'll want to change these.
+$close-quote                 : \201D !default;
+
+
+/* COLOUR VARIABLES
+============================================================================= */
+
+// Our primary color pallette
+$color-primary               : #be1622 !default;
+$color-secondary             : #9a1324 !default;
+$color-tertiary              : #1e3579 !default;
+
+// Base project colours.
+$color-root                  : hsla(0, 0%, 0%, 0.75) !default;
+$color-root-background       : #fafaff !default;
+$color-body-background       : #fff !default;
+
+// Link colours.
+$color-link                  : $color-tertiary  !default;
+$color-link-hover            : darken($color-link, 10%) !default;
+$color-link-visited          : darken($color-link, 10%) !default;
+
+// Some remaining project colours
+$color-headings              : null !default;
+$color-background            : #f8f8f8 !default;
+$color-background-alt        : $color-root !default;
+$color-background-input      : #fcfcfc !default;
+$color-background-pre        : #ffc !default;
+$color-border                : #e4e4e4;
+
+
+/* WIDTH & BREAKPOINT VARIABLES
+============================================================================= */
+
+// Project breakpoints are specified in em to respond to content size changes.
+$sm                          : 35em !default;
+$md                          : 45em !default;
+$lg                          : 64em !default;
+$xl                          : 90em !default;
+
+// Be nice to readers and constrain copy width to maintain an optimal measure.
+$width-copy                  : 45em !default;
+
+// Optionally constrain *all* site content width, if you want.
+$width-container             : ($width-copy * $root-lineheight) !default;

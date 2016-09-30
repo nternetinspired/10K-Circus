@@ -1,0 +1,24 @@
+---
+layout: typogrify
+---
+
+<!doctype html>
+<html lang="{{ site.locale }}">
+
+  {% include head.html %}
+
+  <body class="p m-0 ta-c layout-{{ page.layout }}{% if page.page-class %} {{ page.page-class }}{% endif %}">
+
+    {% include header.html %}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>

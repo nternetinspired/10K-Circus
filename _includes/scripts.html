@@ -1,0 +1,9 @@
+
+<script>
+  {% include plugins.js %}
+  {% include main.js %}
+</script>
+
+{% for js_file in page.js-load %}
+<script src='{{ js_file }}'></script>
+{% endfor %}

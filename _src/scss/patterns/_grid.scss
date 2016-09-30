@@ -1,0 +1,95 @@
+
+/* =============================================================================
+	FLEX GRID
+============================================================================= */
+
+$gutter: spacer(4);
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+
+  &--center {
+    justify-content: center;
+  }
+}
+
+.grid-item {
+  flex: 1 0 100%;
+  position: relative;
+}
+
+@mixin flex-width($namespace: '', $gutter: $gutter) {
+
+  // KISS
+  .#{$namespace}flex-third {
+    flex: 1 1 calc(100% / 3);
+  }
+
+  // Do some maths to create a content-aware grid with defined grid-item widths
+  .#{$namespace}flex-small {
+    flex: 0 1 calc((#{$width-container} / 3) - (#{$gutter}) * 2);
+  }
+
+  .#{$namespace}flex-large {
+    flex: 0 1 calc(((#{$width-container} / 3) * 2) - (#{$gutter} * 2);
+  }
+}
+
+@include flex-width();
+
+/* Flex item widths, responsive versions */
+@include mq($min, $sm) {
+//  @include flex-width('sm--');
+}
+
+@include mq($min, $md) {
+//  @include flex-width('md--');
+}
+
+@include mq($min, $lg) {
+//  @include flex-width('lg--');
+}
+
+@include mq($min, $xl) {
+//  @include flex-width('xl--');
+}
+
+/* Flex item content alignment */
+@mixin flex-align($namespace: '') {
+
+  .#{$namespace}flex-center {
+    align-self: center;
+  }
+
+  .#{$namespace}flex-left {
+    align-self: flex-start;
+  }
+
+  .#{$namespace}flex-right {
+    align-self: flex-right;
+  }
+
+  .#{$namespace}flex-end {
+    align-self: flex-end;
+  }
+}
+
+//@include flex-align();
+
+/* Flex item content alignment, responsive versions */
+@include mq($min, $sm) {
+//  @include flex-align('sm--');
+}
+
+@include mq($min, $md) {
+//  @include flex-align('md--');
+}
+
+@include mq($min, $lg) {
+//  @include flex-align('lg--');
+}
+
+@include mq($min, $xl) {
+//  @include flex-align('xl--');
+}

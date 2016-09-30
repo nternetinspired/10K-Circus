@@ -1,0 +1,7 @@
+
+{% assign url = page.url | remove_first: '/' | split: '/' %}
+<li>
+  <a class="{% if page.url == link.href %}active{% endif %}" href="{{ link.href }}">
+    {{ link.title }}
+  </a>
+</li>

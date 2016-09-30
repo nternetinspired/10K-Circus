@@ -1,0 +1,39 @@
+
+/* ==========================================================================
+    TEXT ALIGNMENT CONTROL STYLES
+   ========================================================================== */
+
+/* Text alignment */
+@mixin text-align($namespace: '') {
+
+  .#{$namespace}ta-c {
+    text-align: center;
+  }
+
+  .#{$namespace}ta-l {
+  //  text-align: left;
+  }
+
+  .#{$namespace}ta-r {
+  //  text-align: right;
+  }
+}
+
+/* Text alignment, responsive versions */
+@include text-align();
+
+@include mq($min, $sm) {
+//  @include text-align('sm--');
+}
+
+@include mq($min, $md) {
+//  @include text-align('md--');
+}
+
+@include mq($min, $lg) {
+//  @include text-align('lg--');
+}
+
+@include mq($min, $xl) {
+//  @include text-align('xl--');
+}

@@ -1,0 +1,33 @@
+
+/* ==========================================================================
+    DOCUMENT ROOT
+   ========================================================================== */
+
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  text-size-adjust: 100%;
+}
+
+/*
+ * Border-box *all the things*, as suggested in:
+ * http:// paulirish.com/2012/box-sizing-border-box-ftw
+ */
+
+* {
+
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+
+  /*
+  * Deploy The Lobotomised Owl selector from @heydonworks, as described in:
+  * http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+  */
+
+  + * {
+    margin-top: spacer();
+  }
+}

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article itemscope itemtype="http://schema.org/Article">
+
+  <header class="ta-c">
+
+    {% if page.subtitle %}
+    <p class="c--1 ff-mono fw-7 h3 p-t p-b tt-uc wow flipInX">&middot;{{ page.subtitle  }}&middot;</p>
+    {% endif %}
+
+    {% if page.title %}
+    <h1 class="slab tt-uc wow flipInX{% if page.subtitle %} m--sm{% endif %}" itemprop="name headline" data-wow-delay=".5s">{{ page.title  }}</h1>
+    {% endif %}
+
+  </header>
+
+  {{ content }}
+
+</article>

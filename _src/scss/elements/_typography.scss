@@ -1,0 +1,36 @@
+/* ==========================================================================
+    TYPOGRAPHY $TODO - Break this file up.
+   ========================================================================== */
+/* PARAGRAPHS */
+p {
+  orphans: 3;
+  widows: 3;
+
+  @if $paragraph-indent {
+    &:not(.lede) + p {
+      margin-top: 0;
+      text-indent: spacer(4);
+    }
+  }
+
+  @include mq($min, $md) {
+    @if $paragraph-justify {
+      text-align: justify;
+    }
+  }
+}
+
+/* ABBREVIATIONS */
+abbr,
+%abbr {
+
+  @if $opentype == true {
+    // Turn on small caps for upper and lowercase letters
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'pnum' 1, 'tnum' 0, 'onum' 1, 'lnum' 0, 'smcp' 1, 'c2sc' 1;
+  }
+}
+
+small,
+%small {
+  @include font-size(.75em);
+}

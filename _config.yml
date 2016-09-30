@@ -1,0 +1,46 @@
+
+# Site settings
+title              : The Incredible 10K Circus
+company            : Cowbell Fever Design
+description        : Seth & Jason’s Incredible 10K Circus
+disclaimer         : Everything reserved, forever.
+url                : http://internet-inspired.com/ # the base hostname & protocol for your site
+locale             : en_UK
+
+# Site owner
+owner              :
+  name             : Seth Warburton
+  email            : 10K-Circus@internet-inspired.com
+  twitter_username : nternetinspired
+  github_username  : nternetinspired
+  github_repo      : 10K-Circus
+
+# Jekyll settings
+baseurl            : '/10K-Circus'
+permalink          : /:categories/:title/
+
+# Other Build settings
+compress_html      :
+  clippings        : all
+
+# Plugins
+whitelist          : []
+gems               :
+- jekyll-gist
+- jekyll-typogrify
+- jekyll-sitemap
+- scss_lint
+
+# Handling Reading
+safe               : false
+include            : [".htaccess","_acts","_pages","img"]
+exclude            : ["README.md","node_modules/",".sass-cache/","Gemfile","Gemfile.lock",".git/","Gruntfile.js","package.json"]
+
+# Define data collections (non-post shiz)
+collections:
+  acts             :
+    output         : true
+    permalink      : /:collection/:path/
+  pages            :
+    output         : true
+    permalink      : /:collection/:path/
