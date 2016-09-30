@@ -1,0 +1,13 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    Seth Warburton -- Development -- @nternetinspired
+    Jason Hawksworth -- Design -- @JasonHorsefight
+
+# TECHNOLOGY COLOPHON
+    HTML5, CSS3
+    Embrace CSS
+    Atom, Grunt, Jekyll
+    Github
+    animate.css, feature.js, wow.js
